@@ -11,8 +11,8 @@ tagline: A simple theme for Jekyll sites.
 email: mtclmn@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A simple theme for Jekyll sites.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mtcl.mn/zing/" # the base hostname & protocol for your site
+baseurl: "/zing" # the subpath of your site, e.g. /blog
+url: "https://mtclmn.github.io/" # the base hostname & protocol for your site
 twitter_username: mattcoleman
 github_username:  mtclmn
 
