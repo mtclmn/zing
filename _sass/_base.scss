@@ -1,0 +1,341 @@
+// Reset
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+// Box Sizing
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+// Type Utilities
+
+
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+.bold    { font-weight: bold }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit;
+}
+
+// Images
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+// Figures
+
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: 2.25rem;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: $spacing-unit;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    text-indent: -3px;
+    margin-bottom: 4rem;
+    max-width: 50em;
+    color: $brand-color;
+}
+h2 {
+    font-size: 48px;
+}
+h3 {
+    font-size: 32px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 16px;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+  max-width: 50em;
+}
+
+.footnotes li {
+  font-size: .85rem;
+}
+
+@media (max-width: 50em) {
+  h1 {
+    font-size: 44px;
+    letter-spacing: -.5px;
+    text-indent: 0px;
+    margin-bottom: 3rem;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 17px;
+  }
+}
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+        color: $text-color;
+        border-bottom: 2px solid $brand-color;
+    }
+}
+
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    // border: 1px solid $grey-color-light;
+    border-radius: $border-radius;
+    background-color: #fff;
+}
+
+code {
+    font-size: inherit;
+    padding: 1px 5px;
+}
+
+pre {
+    margin: ($spacing-unit / 2) auto ($spacing-unit / 2);
+    padding: 1px 24px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit * 2;
+    padding-left: $spacing-unit * 2;
+    @extend %clearfix;
+
+    @media (max-width: 50em) {
+
+      max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+      max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+      padding-right: $spacing-unit;
+      padding-left: $spacing-unit;
+
+    }
+
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+// Spacing Utilities
+
+$space1: .5rem;
+$space2: 1rem;
+$space3: 2rem;
+$space4: 4rem;
+
+.m0  { margin:        0 }
+.mt0 { margin-top:    0 }
+.mr0 { margin-right:  0 }
+.mb0 { margin-bottom: 0 }
+.ml0 { margin-left:   0 }
+.mx0 { margin-left:   0; margin-right:  0 }
+.my0 { margin-top:    0; margin-bottom: 0 }
+
+.m1  { margin:        $space1 }
+.mt1 { margin-top:    $space1 }
+.mr1 { margin-right:  $space1 }
+.mb1 { margin-bottom: $space1 }
+.ml1 { margin-left:   $space1 }
+.mx1 { margin-left:   $space1; margin-right:  $space1 }
+.my1 { margin-top:    $space1; margin-bottom: $space1 }
+
+.m2  { margin:        $space2 }
+.mt2 { margin-top:    $space2 }
+.mr2 { margin-right:  $space2 }
+.mb2 { margin-bottom: $space2 }
+.ml2 { margin-left:   $space2 }
+.mx2 { margin-left:   $space2; margin-right:  $space2 }
+.my2 { margin-top:    $space2; margin-bottom: $space2 }
+
+.m3  { margin:        $space3 }
+.mt3 { margin-top:    $space3 }
+.mr3 { margin-right:  $space3 }
+.mb3 { margin-bottom: $space3 }
+.ml3 { margin-left:   $space3 }
+.mx3 { margin-left:   $space3; margin-right:  $space3 }
+.my3 { margin-top:    $space3; margin-bottom: $space3 }
+
+.m4  { margin:        $space4 }
+.mt4 { margin-top:    $space4 }
+.mr4 { margin-right:  $space4 }
+.mb4 { margin-bottom: $space4 }
+.ml4 { margin-left:   $space4 }
+.mx4 { margin-left:   $space4; margin-right:  $space4 }
+.my4 { margin-top:    $space4; margin-bottom: $space4 }
+
+.mxn1 { margin-left: -$space1; margin-right: -$space1; }
+.mxn2 { margin-left: -$space2; margin-right: -$space2; }
+.mxn3 { margin-left: -$space3; margin-right: -$space3; }
+.mxn4 { margin-left: -$space4; margin-right: -$space4; }
+
+.ml-auto { margin-left: auto }
+.mr-auto { margin-right: auto }
+.mx-auto { margin-left: auto; margin-right: auto; }

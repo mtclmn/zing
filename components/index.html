@@ -1,0 +1,75 @@
+---
+layout: page
+title: Components
+---
+
+<div class="components">
+
+<section>
+<h3>Grid</h3>
+
+  <p>Zing comes with a flexbox grid. If you need support for older browsers, you can easily swap to a float-based grid system.</p>
+  <p>&nbsp;</p>
+
+  <div class="grid">
+    <div class="grid-cell"><div class="demo">1/2</div></div>
+    <div class="grid-cell"><div class="demo">1/2</div></div>
+  </div>
+  <div class="grid">
+    <div class="grid-cell"><div class="demo">1/3</div></div>
+    <div class="grid-cell"><div class="demo">1/3</div></div>
+    <div class="grid-cell"><div class="demo">1/3</div></div>
+  </div>
+  <div class="grid">
+    <div class="grid-cell"><div class="demo">1/4</div></div>
+    <div class="grid-cell"><div class="demo">1/4</div></div>
+    <div class="grid-cell"><div class="demo">1/4</div></div>
+    <div class="grid-cell"><div class="demo">1/4</div></div>
+  </div>
+
+</section>
+
+<section>
+  <h3>Buttons</h3>
+  <p>
+    <a href="#" class="btn">This is a Button</a>
+    <a href="#" class="btn btn--secondary">Secondary Button</a>
+  </p>
+
+</section>
+
+<section>
+<h3>Code</h3>
+
+<p>There is some basic styling for code blocks, but it can be enhanced by including <a href="https://highlightjs.org/">highlight.js</a>, as shown below.</p>
+<br>
+
+<h5>Basic Block</h5>
+<pre><code class="html">
+&lt;ul&gt;
+  &lt;li&gt;Harper&lt;/li&gt;
+  &lt;li&gt;Jordan&lt;/li&gt;
+  &lt;li&gt;Pippen&lt;/li&gt;
+  &lt;li&gt;Rodman&lt;/li&gt;
+  &lt;li&gt;Longley&lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+
+<h5>Jekyll Highlighting</h5>
+{% highlight html linenos %}
+<ul class="list">
+  <li>Harper</li>
+  <li>Jordan</li>
+  <li>Pippen</li>
+  <li>Rodman</li>
+  <li>Longley</li>
+</ul>{% endhighlight %}
+
+<h5>With Hightlight</h5>
+<pre><code class="html">
+<ul><li>Harper</li><li>Jordan</li><li>Pippen</li><li>Rodman</li><li>Longley</li></ul></code></pre>
+
+</section>
+
+</div>

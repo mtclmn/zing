@@ -1,0 +1,30 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Zing
+tagline: A simple theme for Jekyll sites.
+email: mtclmn@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A simple theme for Jekyll sites.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://mtcl.mn/zing/" # the base hostname & protocol for your site
+twitter_username: mattcoleman
+github_username:  mtclmn
+
+# Theme settings
+
+## "light" (default) or "dark"
+theme_mode: light
+## Set to false if you don't want user to have ability to toggle
+## Toggle requires JS
+show_theme_mode_toggle: true
+## Text to show for the toggle
+theme_mode_toggle_text: Toggle Dark Mode
+
+# Build settings
+markdown: kramdown

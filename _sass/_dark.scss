@@ -1,0 +1,28 @@
+// Dark Theme
+// Can be turned on in your config.yml file
+
+.dark { // Start Editing Below
+  background-color: $background-color-dark;
+  color: #aaa;
+  .site-title {
+    color: #fff;
+  }
+  .site-nav .page-link {
+    color: #aaa;
+    &.btn {
+      color: #fff;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  a {
+    color: #fff;
+  }
+  .btn {
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

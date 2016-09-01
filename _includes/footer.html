@@ -1,0 +1,40 @@
+<footer class="site-footer" role="contentinfo">
+
+  <div class="wrapper">
+
+    <div class="grid">
+      <div class="grid-cell"><p>{{ site.title }} Theme for <a href="https://jekyllrb.com" title="Jekyll">Jekyll</a><br> by <a href="http://mtcl.mn">Matt Coleman</a></p></div>
+      <div class="grid-cell right-align">
+        {% if site.show_theme_mode_toggle == true %}
+        <a class="theme-mode-toggle" href="#">{{ site.theme_mode_toggle_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!--
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div> -->
+
+  </div>
+
+</footer>
+
+<script src="{{ "/js/main.js" | prepend: site.baseurl }}" type="text/javascript" async="async"></script>
