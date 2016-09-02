@@ -4,11 +4,17 @@ title: Sample Blog
 nav-order: 3
 ---
 
-<ul class="list-style-none ml0">
+<ul class="post-list list-style-none ml0 mb4">
   {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <li class="mb4">
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.date | date: "%B %d, %Y" }}</p>
     </li>
   {% endfor %}
 </ul>
+
+{% comment %}
+## If you want a RSS link, uncomment this
+<hr>
+<p class="mt4 rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+{% endcomment %}
