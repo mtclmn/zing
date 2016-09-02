@@ -14,10 +14,10 @@ layout: default
 
   <nav class="grid post-nav">
     <div class="grid-cell left-align post-nav-prev">
-      {% if page.previous %}<a href="{{ page.previous.url }}">Prev &#9702; <span>{{ page.previous.title }}</span></a>{% endif %}
+      {% if page.previous %}<a href="{{ page.previous.url | prepend: site.baseurl }}">Prev &#9702; <span>{{ page.previous.title }}</span></a>{% endif %}
     </div>
     <div class="grid-cell right-align post-nav-next">
-      {% if page.next %}<a href="{{ page.next.url }}">Next &#9702; <span>{{ page.next.title }}</span></a>{% endif %}
+      {% if page.next %}<a href="{{ page.next.url | prepend: site.baseurl }}">Next &#9702; <span>{{ page.next.title }}</span></a>{% endif %}
     </div>
   </nav>
 
